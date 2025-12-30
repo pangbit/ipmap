@@ -30,6 +30,15 @@ where
     }
 }
 
+impl<A, V> Default for V1<A, V>
+where
+    A: Address,
+ {
+    fn default() -> Self {
+        Self::new()
+    }
+}
+
 impl<A, V> V1<A, V>
 where
     A: Address,

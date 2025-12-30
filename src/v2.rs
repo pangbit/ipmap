@@ -27,6 +27,15 @@ where
     }
 }
 
+impl<K, V> Default for V2<K, V>
+where
+    K: Prefix + IPNet,
+ {
+    fn default() -> Self {
+        Self::new()
+    }
+}
+
 impl<K, V> V2<K, V>
 where
     K: Prefix + IPNet,
